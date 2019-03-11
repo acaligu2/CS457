@@ -1,0 +1,15 @@
+Running HTTP Server:
+  1.) Cd into the directory containing httpServer.py
+  2.) Compile and run the server using "python3 httpServer.py"
+    *No makefile is necessary to run the server
+  3.) The server will start and display the IP address and Port Number
+
+Creating Requests:
+  1.) While the HTTP Server is running, open a second terminal window
+  2.) Cd into an empty directory
+  3.) Type "wget http://<Remote Address>.cs.binghamton.edu:<Port Number>/<Resource>" where:
+     - <Remote Address> is the Remote Machine (remote00 - remote07) assigned to the server when created
+     - <Port Number> is the port number assigned to the server when created
+     - <Resource> is the file that is requested for download
+  4.) If the file requested is valid, it will be downloaded into the directory
+  5.) Verify the contents of the file are all accounted for using the diff command in the terminal
