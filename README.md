@@ -1,2 +1,2 @@
 # CS457
-Distributed Systems Projects - Taken Fall 2018
+Intro to Distributed Systems Projects - Fall 2018
