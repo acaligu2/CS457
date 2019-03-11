@@ -1,0 +1,4 @@
+0 remote02.cs.binghamton.edu 10024
+1 remote06.cs.binghamton.edu 10025
+2 remote07.cs.binghamton.edu 10026
+3 remote00.cs.binghamton.edu 10027

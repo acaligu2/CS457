@@ -1,0 +1,61 @@
+syntax = "proto3";
+
+message InitCoordinator{
+  uint32 coordinator = 1;
+}
+
+//Get request
+message GetMsg {
+  uint32 key = 1;
+  uint32 level = 2;
+}
+
+//Put request
+message PutMsg {
+  uint32 key = 1;
+  string val = 2;
+  uint32 level = 3;
+}
+
+//Get response
+message StringValue {
+  string val = 1;
+}
+
+message Success {
+  bool success = 2;
+}
+
+//this is for reading and writing to replicas
+message PairRead {
+  int32 key = 1;
+  string val = 2;
+}
+
+message PairWrite {
+  int32 key = 1;
+  string val = 2;
+}
+
+message Hint{
+  repeated int32 hintKey = 1;
+  repeated string hintValue = 2;
+}
+
+message Timestamp{
+  int32 key = 1;
+}
+
+message Msg {
+  oneof msg {
+    InitCoordinator init = 1;
+    PutMsg put = 2;
+    GetMsg get = 3;
+    StringValue string_val = 4;
+    PairRead pair_read = 5;
+    PairWrite pair_write = 6;
+    Success suc = 7;
+    Hint hint = 8;
+    Timestamp timestamp = 9;
+  }
+}
